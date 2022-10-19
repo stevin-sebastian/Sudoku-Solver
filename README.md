@@ -1,9 +1,8 @@
 # Sudoku Solver
 
-Sudoku solving algoritm that uses techniques such as:
+Sudoku solving algorithm that uses techniques such as:
 
 -Obvious singles elimination. 
-
 -Cell option revision.
 
 -Naked pairs elimination. 
