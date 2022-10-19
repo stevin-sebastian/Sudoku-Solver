@@ -1,6 +1,7 @@
 # Sudoku Solver
 
 Sudoku solving algoritm that uses techniques such as:
+
 -Obvious singles elimination. 
 
 -Cell option revision.
