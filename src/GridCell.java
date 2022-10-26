@@ -1,7 +1,4 @@
-import java.util.ArrayList;
 import java.util.HashSet;
-
-import javax.print.DocFlavor.INPUT_STREAM;
 
 /*Non-executable class, for the purpose of creating
  gridcell objects to ultimately create a gridcell [][] matrix.*/
@@ -9,11 +6,14 @@ public class GridCell {
     private int value;
     HashSet<Integer> options;
 
-    /*Constructor */
-    public GridCell(int v) {
-        this.value = v;
+    /**
+     * Class Constructor.
+     * @param val
+     */
+    public GridCell(int val) {
+        this.value = val;
         this.options = new HashSet<Integer>();
-        if (v==0){  
+        if (val==0){  
             this.options.add(1);
             this.options.add(2);
             this.options.add(3);
@@ -27,25 +27,28 @@ public class GridCell {
 
     }
 
-    /*Getter */
+    
+    /**
+     * Getter for the cell's value
+     * @return Value
+     */
     public int getValue() {
         return value;
     }
-    /*Setter */
-    public void setValue(int v) {
-        this.value = v;
+    
+    /**
+     * Setter for the cell's value
+     * @param val - input value
+     */
+    public void setValue(int val) {
+        this.value = val;
     }
 
-    /*If only one element remains in options, this method sets it to <value>. */
-    // public void setValueToFinalOption() {
-    //     this.value = this.options.get(0);
-    // }
-
-    /*Removes all values from the ArrayList options of the cell. */
-    public void resetOptions(){
-        this.options.removeAll(options);
-    }
-
+    /**
+     * Checks if two grid cells have equal option sets.
+     * @param cell - second option set.
+     * @return true - if the two option sets are equal.
+     */
     public boolean optionsEquals(HashSet<Integer> cell){
         if(this.options.equals(cell)){
             return true;
